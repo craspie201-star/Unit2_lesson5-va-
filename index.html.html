@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Easy Steps to Chinese 1 – Bài tập & trò chơi</title>
+<style>
+:root{--bg:#eaf3fb;--card:#fff;--ink:#14213d;--mut:#5c6b88;--red:#e63946;--line:#cfdceb;--u2:#e63946;--u3:#1b9e77;--u4:#d6336c;--u5:#2b6cb0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1830;--card:#19264a;--ink:#eef3ff;--mut:#9fb0d3;--line:#2c3c66}}
+:root[data-theme="dark"]{--bg:#0f1830;--card:#19264a;--ink:#eef3ff;--mut:#9fb0d3;--line:#2c3c66}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:16px/1.5 "Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:28px;line-height:1.2;margin:0}.sub{color:var(--mut);margin:6px 0 18px}
+h2{font-size:18px;margin:24px 0 10px;display:flex;align-items:center;gap:8px}
+h2 i{width:12px;height:12px;border-radius:50%;display:inline-block;background:var(--c)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:2px solid var(--line);border-left:8px solid var(--c);border-radius:14px;padding:12px 14px;min-height:64px}
+a.card:hover,a.card:focus-visible{border-color:var(--c);outline:none;transform:translateY(-2px)}
+a.card b{font-size:22px;display:block;line-height:1.2}a.card span{color:var(--mut);font-size:14px}
+.n{color:var(--c);font-weight:700;font-size:13px}
+footer{margin-top:28px;color:var(--mut);font-size:14px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><main>
+<h1>Easy Steps to Chinese 1</h1>
+<p class="sub">Bài tập & trò chơi · Chọn một bài để bắt đầu. Điểm của mỗi bài được lưu riêng trong trình duyệt.</p>
+<div id="list"></div>
+<footer>Mẹo: mỗi bài hỏi tên học sinh ở lần đầu. Dùng chung một máy thì mỗi em nhập tên riêng.</footer>
+</main>
+<script>
+const U=[
+ ["Unit 2","--u2",[["unit2.html","Bài 5 + 6","年龄 · 电话号码","Tuổi tác · Số điện thoại"]]],
+ ["Unit 3","--u3",[["bai7.html","Bài 7","家庭成员","Thành viên gia đình"],["bai8.html","Bài 8","自我介绍","Tự giới thiệu"],["bai9.html","Bài 9","职业","Nghề nghiệp"]]],
+ ["Unit 4","--u4",[["bai10.html","Bài 10","时间","Thời gian"],["bai11.html","Bài 11","日常起居","Sinh hoạt hằng ngày"],["bai12.html","Bài 12","交通工具","Phương tiện giao thông"]]],
+ ["Unit 5","--u5",[["bai13.html","Bài 13","颜色","Màu sắc"],["bai14.html","Bài 14","穿着","Quần áo"],["bai15.html","Bài 15","人体部位","Bộ phận cơ thể"]]]
+];
+document.getElementById("list").innerHTML=U.map(([u,c,ls])=>`<h2 style="--c:var(${c})"><i></i>${u}</h2><div class="grid">${ls.map(l=>`<a class="card" style="--c:var(${c})" href="${l[0]}"><span class="n">${l[1]}</span><b>${l[2]}</b><span>${l[3]}</span></a>`).join("")}</div>`).join("");
+</script></body></html>
